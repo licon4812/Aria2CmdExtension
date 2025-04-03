@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Aria2Extension (Package)": {
+      "commandName": "MsixPackage",
+      "doNotLaunchApp": true
+    },
+    "Aria2Extension (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
