@@ -10,16 +10,9 @@ using Microsoft.CommandPalette.Extensions;
 namespace Aria2Extension;
 
 [Guid("0437f44c-1c35-4caf-b94a-d0faf465abc9")]
-public sealed partial class Aria2Extension : IExtension, IDisposable
+public sealed partial class Aria2Extension(ManualResetEvent extensionDisposedEvent) : IExtension, IDisposable
 {
-    private readonly ManualResetEvent _extensionDisposedEvent;
-
     private readonly Aria2ExtensionCommandsProvider _provider = new();
-
-    public Aria2Extension(ManualResetEvent extensionDisposedEvent)
-    {
-        this._extensionDisposedEvent = extensionDisposedEvent;
-    }
 
     public object? GetProvider(ProviderType providerType)
     {
@@ -30,5 +23,5 @@ public sealed partial class Aria2Extension : IExtension, IDisposable
         };
     }
 
-    public void Dispose() => this._extensionDisposedEvent.Set();
+    public void Dispose() => extensionDisposedEvent.Set();
 }

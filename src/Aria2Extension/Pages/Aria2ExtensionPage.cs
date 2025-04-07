@@ -2,6 +2,7 @@
 // The Microsoft Corporation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using Aria2Extension.Commands;
 using Microsoft.CommandPalette.Extensions;
 using Microsoft.CommandPalette.Extensions.Toolkit;
 
@@ -19,7 +20,7 @@ internal sealed partial class Aria2ExtensionPage : ListPage
     public override IListItem[] GetItems()
     {
         return [
-            new ListItem(new NoOpCommand()) { Title = "TODO: Implement your extension here" }
+            new ListItem(new InstallAria2Command()) { Title = "Install Aria2" }
         ];
     }
 }

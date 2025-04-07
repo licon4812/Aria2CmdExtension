@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -17,7 +17,7 @@
 
   <Properties>
     <DisplayName>Aria2</DisplayName>
-    <PublisherDisplayName>A Lone Developer</PublisherDisplayName>
+    <PublisherDisplayName>Licon4812</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
