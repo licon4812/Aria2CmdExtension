@@ -27,12 +27,12 @@ namespace Aria2Extension.Commands
                 CreateNoWindow = false
             };
 
-            using var process = new Process();
+            using var process = new Process(); 
             process.StartInfo = startInfo;
             process.Start();
             process.WaitForExit();
 
-            return CommandResult.Dismiss();
+            return CommandResult.GoHome();
         }
     }
 }

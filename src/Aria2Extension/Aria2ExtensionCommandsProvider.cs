@@ -17,49 +17,15 @@ public partial class Aria2ExtensionCommandsProvider : CommandProvider
     public Aria2ExtensionCommandsProvider()
     {
         DisplayName = "Aria2";
-        Icon = IconHelpers.FromRelativePath("Assets\\StoreLogo.png");
-        if (!IsAria2Installed())
-        {
-            _commands = [
-                new CommandItem(new Aria2ExtensionPage()) { Title = "Install Aria2" },
-            ];
-        }
-        else
-        {
-            _commands = [
-                new CommandItem(new DownloadFormPage()) { Title = $"{DisplayName}: Download" },
-                new CommandItem(new HelpCommand()){Title = $"{DisplayName}: Help" }
-            ];
+        Icon = new IconInfo("\uEBD3");
 
-        }
+        _commands = [
+            new CommandItem(new Aria2ExtensionPage()) { Title = "Aria2", Subtitle = "Download files using Aria2"}
+        ];
     }
 
     public override ICommandItem[] TopLevelCommands()
     {
         return _commands;
     }
-
-    internal bool IsAria2Installed()
-    {
-        var startInfo = new ProcessStartInfo
-        {
-            FileName = "winget",
-            Arguments = "list aria2.aria2",
-            RedirectStandardOutput = true,
-            RedirectStandardError = true,
-            UseShellExecute = false,
-            CreateNoWindow = true
-        };
-
-        using var process = new Process();
-        process.StartInfo = startInfo;
-        process.Start();
-        var output = process.StandardOutput.ReadToEnd();
-        var error = process.StandardError.ReadToEnd();
-        process.WaitForExit();
-
-        // Check if the output contains "aria2.aria2"
-        return output.Contains("aria2.aria2");
-    }
-
 }

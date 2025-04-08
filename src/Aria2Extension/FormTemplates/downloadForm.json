@@ -15,7 +15,7 @@
       "placeholder": "The directory to store the downloaded file.",
       "label": "Directory",
       "id": "directory",
-      "value": "%Userdownloads%\\Downloads"
+      "isRequired": true
     },
     {
       "type": "Input.Text",
