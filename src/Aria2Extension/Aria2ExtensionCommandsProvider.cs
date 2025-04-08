@@ -28,6 +28,7 @@ public partial class Aria2ExtensionCommandsProvider : CommandProvider
         {
             _commands = [
                 new CommandItem(new DownloadFormPage()) { Title = $"{DisplayName}: Download" },
+                new CommandItem(new HelpCommand()){Title = $"{DisplayName}: Help" }
             ];
 
         }

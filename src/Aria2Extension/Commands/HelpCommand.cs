@@ -9,12 +9,12 @@ using Microsoft.CommandPalette.Extensions.Toolkit;
 
 namespace Aria2Extension.Commands
 {
-    internal partial class InstallAria2Command : InvokableCommand
+    internal partial class HelpCommand: InvokableCommand
     {
-        public InstallAria2Command()
+        public HelpCommand()
         {
-            Icon = new IconInfo("\uE896");
-            Name = "Install Aria2";
+            Icon = new IconInfo("\uE897");
+            Name = "Help";
         }
 
         public override ICommandResult Invoke()
@@ -22,7 +22,7 @@ namespace Aria2Extension.Commands
             var startInfo = new ProcessStartInfo
             {
                 FileName = "cmd.exe",
-                Arguments = "/k winget install aria2.aria2",
+                Arguments = "/k aria2c --help", // Use /k to keep the shell open
                 UseShellExecute = true,
                 CreateNoWindow = false
             };
@@ -32,7 +32,7 @@ namespace Aria2Extension.Commands
             process.Start();
             process.WaitForExit();
 
-            return CommandResult.Dismiss();
+            return CommandResult.KeepOpen();
         }
     }
 }

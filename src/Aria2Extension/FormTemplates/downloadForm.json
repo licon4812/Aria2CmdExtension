@@ -14,7 +14,8 @@
       "type": "Input.Text",
       "placeholder": "The directory to store the downloaded file.",
       "label": "Directory",
-      "id": "directory"
+      "id": "directory",
+      "value": "%Userdownloads%\\Downloads"
     },
     {
       "type": "Input.Text",
@@ -64,10 +65,16 @@
       "value": "false"
     },
     {
+      "type": "Input.Toggle",
+      "title": "Continue",
+      "label": "Continue",
+      "id": "continue"
+    },
+    {
       "type": "Input.Text",
       "placeholder": "Downloads URIs found in FILE.",
       "id": "inputFile",
       "label": "Input File"
     }
   ]
-}        
+}
