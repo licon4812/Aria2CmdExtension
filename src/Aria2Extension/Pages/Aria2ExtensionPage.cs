@@ -12,7 +12,7 @@ internal sealed partial class Aria2ExtensionPage : ListPage
 {
     public Aria2ExtensionPage()
     {
-        Icon = IconHelpers.FromRelativePath("Assets\\StoreLogo.png");
+        Icon = new IconInfo("\uE896");
         Title = "Aria2";
         Name = "Open";
     }

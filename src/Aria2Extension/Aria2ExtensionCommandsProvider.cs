@@ -18,7 +18,7 @@ public partial class Aria2ExtensionCommandsProvider : CommandProvider
     {
         DisplayName = "Aria2";
         Icon = IconHelpers.FromRelativePath("Assets\\StoreLogo.png");
-        if (IsAria2Installed())
+        if (!IsAria2Installed())
         {
             _commands = [
                 new CommandItem(new Aria2ExtensionPage()) { Title = "Install Aria2" },
@@ -27,7 +27,7 @@ public partial class Aria2ExtensionCommandsProvider : CommandProvider
         else
         {
             _commands = [
-                new CommandItem(new OpenDownloadCommand()) { Title = $"{DisplayName}: Download" },
+                new CommandItem(new DownloadFormPage()) { Title = $"{DisplayName}: Download" },
             ];
 
         }
