@@ -35,7 +35,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Aria2"
+        DisplayName="Aria2 Extension for Command Pallet"
         Description="Aria2"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
