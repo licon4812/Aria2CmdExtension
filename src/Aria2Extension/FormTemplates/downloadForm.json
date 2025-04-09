@@ -15,7 +15,8 @@
       "placeholder": "The directory to store the downloaded file.",
       "label": "Directory",
       "id": "directory",
-      "isRequired": true
+      "isRequired": true,
+      "errorMessage": "Directory is required"
     },
     {
       "type": "Input.Text",
@@ -75,6 +76,141 @@
       "placeholder": "Downloads URIs found in FILE.",
       "id": "inputFile",
       "label": "Input File"
+    },
+    {
+      "type": "Input.Number",
+      "placeholder": "Placeholder text",
+      "id": "maxConcurrentDownloads",
+      "label": "Max Concurrent Downloads",
+      "value": 5,
+      "min": 1
+    },
+    {
+      "type": "Input.Toggle",
+      "title": "Force Sequential",
+      "id": "forceSequential",
+      "label": "Force Sequential",
+      "value": "false"
+    },
+    {
+      "type": "Input.Number",
+      "placeholder": "Placeholder text",
+      "id": "maxConnection",
+      "label": "Max Connection Per Server",
+      "min": 1,
+      "max": 16,
+      "value": 1
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "user",
+      "id": "ftpUser",
+      "label": "FTP User"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "Password",
+      "id": "ftpPassword",
+      "label": "FTP Password",
+      "style": "Password"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "user",
+      "id": "httpUser",
+      "label": "HTTP User"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "Password",
+      "id": "HTTP Password",
+      "label": "HTTP Password",
+      "style": "Password"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "/path/to/cookies/file",
+      "id": "cookiesFile",
+      "label": "Cookies File"
+    },
+    {
+      "type": "Input.Toggle",
+      "title": "Show Files",
+      "label": "Show Files",
+      "id": "showFiles",
+      "value": "false"
+    },
+    {
+      "type": "Input.Number",
+      "placeholder": "Set max overall upload speed in bytes/sec. 0 means unrestricted.",
+      "label": "Max Overall Upload Limit",
+      "value": 0,
+      "min": 0,
+      "id": "maxOverallUpload"
+    },
+    {
+      "type": "Input.Number",
+      "placeholder": "Set max upload speed in bytes/sec. 0 means unrestricted.",
+      "label": "Max Upload Limit",
+      "value": 0,
+      "min": 0,
+      "id": "maxUpload"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "/path/to/file",
+      "id": "torrentfile",
+      "label": "Torrent File Path"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "6881-6999",
+      "id": "listenPort",
+      "label": "Listen Port",
+      "value": "6881-6999"
+    },
+    {
+      "type": "Input.Toggle",
+      "title": "Enable DHT",
+      "id": "enableDHT",
+      "value": "true"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "6881-6999",
+      "id": "dhtListenPort",
+      "label": "DHT Listen Port",
+      "value": "6881-6999"
+    },
+    {
+      "type": "Input.Toggle",
+      "title": "Enable DHT 6",
+      "id": "enableDHT6",
+      "value": "false"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "::1",
+      "id": "dht6ListenAddress",
+      "label": "DHT6 Listen Address",
+      "value": "::1"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "/path/to/file",
+      "id": "metalinkFile",
+      "label": "Metalink File"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Submit"
+        }
+      ],
+      "id": "submit",
+      "horizontalAlignment": "Left"
     }
   ]
 }

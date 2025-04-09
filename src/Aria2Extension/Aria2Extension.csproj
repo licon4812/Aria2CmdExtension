@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FormTemplates\downloadForm.json">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

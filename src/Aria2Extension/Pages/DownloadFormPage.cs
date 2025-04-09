@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using Microsoft.CommandPalette.Extensions;
 using Microsoft.CommandPalette.Extensions.Toolkit;
@@ -40,6 +41,23 @@ namespace Aria2Extension.Pages
             }
 
             TemplateJson = File.ReadAllText(path);
+        }
+
+        public override CommandResult SubmitForm(string payload)
+        {
+            var formInput = JsonNode.Parse(payload)?.AsObject();
+            if (formInput == null)
+            {
+                return CommandResult.GoHome();
+            }
+
+            // retrieve the value of the input field with the id "name"
+            var name = formInput["directory"]?.ToString();
+
+            // do something with the data
+            Console.WriteLine(name);
+            // and eventually
+            return CommandResult.GoBack();
         }
     }
 }
