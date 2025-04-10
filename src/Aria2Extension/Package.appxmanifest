@@ -9,15 +9,15 @@
   IgnorableNamespaces="uap uap3 rescap">
 
   <Identity
-    Name="Licon4812.Aria2ForCmdPal"
-    Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+    Name="23610AlickolliSoftware.Aria2ExtensionforCommandPal"
+    Publisher="CN=5CECD841-CF4E-45AF-B443-573F4A3614A0"
     Version="0.0.1.0" />
   <!-- When you're ready to publish your extension, you'll need to change the
        Publisher= to match your own identity -->
 
   <Properties>
     <DisplayName>Aria2 Extension for Command Pallet</DisplayName>
-    <PublisherDisplayName>Licon4812</PublisherDisplayName>
+    <PublisherDisplayName>Alickolli Software</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
