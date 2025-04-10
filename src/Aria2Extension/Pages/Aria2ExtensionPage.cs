@@ -39,24 +39,25 @@ internal sealed partial class Aria2ExtensionPage : ListPage
 
     internal static bool IsAria2Installed()
     {
-        var startInfo = new ProcessStartInfo
+        try
         {
-            FileName = "winget",
-            Arguments = "list aria2.aria2",
-            RedirectStandardOutput = true,
-            RedirectStandardError = true,
-            UseShellExecute = false,
-            CreateNoWindow = true
-        };
+            using var process = new Process();
+            process.StartInfo = new ProcessStartInfo
+            {
+                FileName = "aria2c",
+                Arguments = "--version",
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
 
-        using var process = new Process();
-        process.StartInfo = startInfo;
-        process.Start();
-        var output = process.StandardOutput.ReadToEnd();
-        var error = process.StandardError.ReadToEnd();
-        process.WaitForExit();
-
-        // Check if the output contains "aria2.aria2"
-        return output.Contains("aria2.aria2");
+            process.Start();
+            process.WaitForExit();
+            return process.ExitCode == 0;
+        }
+        catch
+        {
+            return false;
+        }
     }
 }
