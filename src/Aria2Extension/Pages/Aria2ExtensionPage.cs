@@ -37,7 +37,7 @@ internal sealed partial class Aria2ExtensionPage : ListPage
         }
     }
 
-    internal bool IsAria2Installed()
+    internal static bool IsAria2Installed()
     {
         var startInfo = new ProcessStartInfo
         {

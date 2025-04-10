@@ -13,7 +13,7 @@
     {
       "type": "Input.Text",
       "placeholder": "The directory to store the downloaded file.",
-      "value": "%UserProfile%\\\\Downloads\\\\",
+      "value": "%UserProfile%\\Downloads\\",
       "label": "Directory",
       "id": "directory",
       "isRequired": true,
@@ -207,7 +207,7 @@
       "actions": [
         {
           "type": "Action.Submit",
-          "title": "Submit"
+          "title": "Download"
         }
       ],
       "id": "submit",

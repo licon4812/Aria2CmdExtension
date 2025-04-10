@@ -16,13 +16,15 @@ namespace Aria2Extension.Models
             // Add the directory to store the downloaded file
             if (!string.IsNullOrEmpty(downloadFormResults.Directory))
             {
-                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --dir=\"{0}\"", downloadFormResults.Directory));
+                var escapedDirectory = downloadFormResults.Directory.Replace("\\", "\\\\");
+                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --dir=\"{0}\"", escapedDirectory));
             }
 
             // Add the output file name
             if (!string.IsNullOrEmpty(downloadFormResults.Output))
             {
-                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --out=\"{0}\"", downloadFormResults.Output));
+                var escapedOutputFile = downloadFormResults.Output.Replace("\\", "\\\\");
+                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --out=\"{0}\"", escapedOutputFile));
             }
 
             // Add the number of connections to use for downloading
@@ -46,7 +48,8 @@ namespace Aria2Extension.Models
             // Add the input file for URIs
             if (!string.IsNullOrEmpty(downloadFormResults.InputFile))
             {
-                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --input-file=\"{0}\"", downloadFormResults.InputFile));
+                var escapedInputFile = downloadFormResults.InputFile.Replace("\\", "\\\\");
+                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --input-file=\"{0}\"", escapedInputFile));
             }
 
             // Add the maximum number of concurrent downloads
@@ -84,7 +87,8 @@ namespace Aria2Extension.Models
             // Add cookies file
             if (!string.IsNullOrEmpty(downloadFormResults.CookiesFile))
             {
-                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --load-cookies=\"{0}\"", downloadFormResults.CookiesFile));
+                var escapedCookiesFile = downloadFormResults.CookiesFile.Replace("\\", "\\\\");
+                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --load-cookies=\"{0}\"", escapedCookiesFile));
             }
 
             // Add the show files option
@@ -129,7 +133,8 @@ namespace Aria2Extension.Models
             // Add the metalink file
             if (!string.IsNullOrEmpty(downloadFormResults.MetalinkFile))
             {
-                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --metalink-file=\"{0}\"", downloadFormResults.MetalinkFile));
+                var escapedMetalinkFile = downloadFormResults.MetalinkFile.Replace("\\", "\\\\");
+                aria2cCommand.Append(string.Format(CultureInfo.InvariantCulture, " --metalink-file=\"{0}\"", escapedMetalinkFile));
             }
 
             // Add the file or URI to download
