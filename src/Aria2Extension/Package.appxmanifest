@@ -16,18 +16,20 @@
        Publisher= to match your own identity -->
 
   <Properties>
-    <DisplayName>Aria2 For CmdPal</DisplayName>
+    <DisplayName>Aria2 Extension for Command Pallet</DisplayName>
     <PublisherDisplayName>Licon4812</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.19041.0" MaxVersionTested="10.0.19041.0" />
-    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.19041.0"
+      MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0"
+      MaxVersionTested="10.0.19041.0" />
   </Dependencies>
 
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
 
   <Applications>
@@ -36,17 +38,19 @@
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
         DisplayName="Aria2 Extension for Command Pallet"
-        Description="Aria2"
+        Description="Aria2 Extension for Command Pallet"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"  Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"
+          Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
         <com:Extension Category="windows.comServer">
           <com:ComServer>
-            <com:ExeServer Executable="Aria2Extension.exe" Arguments="-RegisterProcessAsComServer" DisplayName="Aria2">
+            <com:ExeServer Executable="Aria2Extension.exe" Arguments="-RegisterProcessAsComServer"
+              DisplayName="Aria2">
               <com:Class Id="0437f44c-1c35-4caf-b94a-d0faf465abc9" DisplayName="Aria2" />
             </com:ExeServer>
           </com:ComServer>
@@ -55,15 +59,15 @@
           <uap3:AppExtension Name="com.microsoft.commandpalette"
             Id="ID"
             PublicFolder="Public"
-            DisplayName="Aria2"
-            Description="Aria2">
+            DisplayName="Aria2 Extension for Command Pallet"
+            Description="Aria2 Extension for Command Pallet">
             <uap3:Properties>
               <CmdPalProvider>
                 <Activation>
                   <CreateInstance ClassId="0437f44c-1c35-4caf-b94a-d0faf465abc9" />
                 </Activation>
                 <SupportedInterfaces>
-                  <Commands/>
+                  <Commands />
                 </SupportedInterfaces>
               </CmdPalProvider>
             </uap3:Properties>
