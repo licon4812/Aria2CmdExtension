@@ -15,10 +15,14 @@ Aria2CmdExtension is an extension for the PowerToys Command Palette that enables
 ## Installation
 
 ### Via Command Palette
+
 Coming soon
 
 ### Via Microsoft store
-Coming soon
+
+<a href="ms-windows-store://pdp/?productid=9N6X66R95K6T">
+ <img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/>
+</a>
 
 ### Via Winget
 
