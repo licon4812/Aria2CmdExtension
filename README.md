@@ -20,7 +20,7 @@ Coming soon
 
 ### Via Microsoft store
 
-<a href="ms-windows-store://pdp/?productid=9N6X66R95K6T">
+<a href="https://apps.microsoft.com/detail/9N6X66R95K6T?mode=direct">
  <img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/>
 </a>
 
