@@ -16,11 +16,12 @@ public partial class Aria2ExtensionCommandsProvider : CommandProvider
 
     public Aria2ExtensionCommandsProvider()
     {
+        // Include the version number in the DisplayName
         DisplayName = "Aria2";
         Icon = new IconInfo("\uEBD3");
 
         _commands = [
-            new CommandItem(new Aria2ExtensionPage()) { Title = "Aria2", Subtitle = "Download files using Aria2"}
+            new CommandItem(new Aria2ExtensionPage()) { Title = "Aria2", Subtitle = "Download files using Aria2" }
         ];
     }
 

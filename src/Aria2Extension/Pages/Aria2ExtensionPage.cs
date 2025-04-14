@@ -13,8 +13,12 @@ internal sealed partial class Aria2ExtensionPage : ListPage
 {
     public Aria2ExtensionPage()
     {
+        // Retrieve the version number from the package manifest
+        var version = Windows.ApplicationModel.Package.Current.Id.Version;
+        var versionString = $"{version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
+
         Icon = new IconInfo("\uEBD3");
-        Title = "Aria2";
+        Title = $"Aria2 v{versionString}";
         Name = "Open";
     }
 
