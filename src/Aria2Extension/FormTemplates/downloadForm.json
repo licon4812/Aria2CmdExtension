@@ -13,7 +13,7 @@
     {
       "type": "Input.Text",
       "placeholder": "The directory to store the downloaded file.",
-      "value": "%UserProfile%\\Downloads\\",
+      "value": "$path",
       "label": "Directory",
       "id": "directory",
       "isRequired": true,

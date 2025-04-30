@@ -42,7 +42,10 @@ namespace Aria2Extension.Pages
                 throw new FileNotFoundException($"The file 'downloadForm.json' was not found at path: {path}");
             }
 
-            TemplateJson = File.ReadAllText(path);
+            var downloadDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            downloadDirectory = Path.Combine(downloadDirectory, "Downloads").Replace("\\","\\\\");
+
+            TemplateJson = File.ReadAllText(path).Replace("$path", downloadDirectory);
         }
 
         public override CommandResult SubmitForm(string payload)
