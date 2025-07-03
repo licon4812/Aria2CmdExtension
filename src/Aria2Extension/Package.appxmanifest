@@ -6,11 +6,12 @@
   xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
   xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  IgnorableNamespaces="uap uap3 rescap">
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  IgnorableNamespaces="uap uap3 rescap mp">
 
   <Identity
     Name="23610AlickolliSoftware.Aria2ExtensionforCommandPal"
-    Publisher="CN=jalic"
+    Publisher="CN=5CECD841-CF4E-45AF-B443-573F4A3614A0"
     Version="0.0.5.0" />
   <!-- When you're ready to publish your extension, you'll need to change the
        Publisher= to match your own identity -->
