@@ -10,8 +10,8 @@
 
   <Identity
     Name="23610AlickolliSoftware.Aria2ExtensionforCommandPal"
-    Publisher="CN=5CECD841-CF4E-45AF-B443-573F4A3614A0"
-    Version="0.0.4.0" />
+    Publisher="CN=jalic"
+    Version="0.0.5.0" />
   <!-- When you're ready to publish your extension, you'll need to change the
        Publisher= to match your own identity -->
 
