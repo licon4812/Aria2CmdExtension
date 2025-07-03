@@ -70,7 +70,9 @@
     <WarningsNotAsErrors>IL2081</WarningsNotAsErrors>
 
     <PublishTrimmed>true</PublishTrimmed>
-    <PublishSingleFile>true</PublishSingleFile>
+    <PublishAot>true</PublishAot>
+    <PublishSingleFile>false</PublishSingleFile>
+    <SelfContained>true</SelfContained>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxPackageSigningEnabled>False</AppxPackageSigningEnabled>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
